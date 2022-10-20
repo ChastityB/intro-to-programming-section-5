@@ -60,7 +60,11 @@ function checkGuess() {
       const remainingAttempts = maxNumberOfAttempts - attempts;
 
       numberOfGuessesMessage.style.display = "";
+    if (remainingAttempts === 1){
+      numberOfGuessesMessage.innerHTML = `You guessed ${guess}. <br> ${remainingAttempts} guess remaining`;
+    } else {
       numberOfGuessesMessage.innerHTML = `You guessed ${guess}. <br> ${remainingAttempts} guesses remaining`;
+      }
     }
 
     if (attempts == maxNumberOfAttempts) {
